@@ -16,6 +16,7 @@
     "@react-navigation/stack": "^6.3.29",
     "add": "^2.0.6",
     "autoprefixer": "^10.4.19",
+    "date-fns": "^3.6.0",
     "expo": "~51.0.8",
     "expo-status-bar": "~1.12.1",
     "formik": "^2.4.6",

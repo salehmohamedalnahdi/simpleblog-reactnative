@@ -5,7 +5,7 @@ import tw from 'tailwind-react-native-classnames';
 
 export default DeleteButton = ({navigation,id}) => {
   const DeleteBlog= async(id,navigation) => {;
-    const response= await fetch('https://jsonplaceholder.typicode.com/posts/'+id, {
+    const response= await fetch('https://simbleblog-backend.onrender.com/delete/'+id, {
         method: 'DELETE',
       });
     const result= await response.json();

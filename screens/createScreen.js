@@ -8,12 +8,11 @@ export default function CreateScreen({ navigation }) {
  
     const AddBlog = async(values) => {
 
-      const response= await fetch('https://jsonplaceholder.typicode.com/posts/', {
+      const response= await fetch('https://simbleblog-backend.onrender.com/create', {
         method: 'POST',
         body: JSON.stringify({
           title:values.title,
-          body: values.content,
-          userId: 3,
+          content: values.content,
         }),
         headers: {
           'Content-type': 'application/json; charset=UTF-8',
@@ -25,19 +24,9 @@ export default function CreateScreen({ navigation }) {
 
     return (
     <View >
-      <Form AddBlog={AddBlog} />
+      <Form AddBlog={AddBlog} navigation={navigation} />
     </View>
   )
 }
 
 
-
-/* <ScrollView>
-              {data ? (
-               data.map((item)=> <>
-               <Text key={item.id} style={tw`text-white font-semibold `}>Title: {item.title} </Text>
-               <Text style={tw`text-white `}>Discription: </Text>
-               </>)
-              ) : (<Text></Text> )
-              }
-              </ScrollView>*/

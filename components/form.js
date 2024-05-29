@@ -4,9 +4,8 @@ import tw from 'tailwind-react-native-classnames';
 import { Formik } from 'formik';
 import ValidationForm from "../utility/validationForm"
 
-export default function Form({ AddBlog }) {
+export default function Form({ AddBlog, navigation}) {
     const validation =ValidationForm()
-
     return (
     <View style={tw `mx-2 mt-8 flex `}>
         <Formik
@@ -15,6 +14,7 @@ export default function Form({ AddBlog }) {
         onSubmit={(values, actions) => {
           actions.resetForm();
           AddBlog(values);
+          navigation.navigate("HomeScreen")
           
         }}
       >
